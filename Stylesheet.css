@@ -1,0 +1,512 @@
+
+@font-face {
+    font-family: 'Alpino';
+    src: url('Alpino-Regular.otf');
+    font-weight: normal;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+about. {
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fdf6e3;
+    font-family: 'Alpino';
+}
+
+
+
+
+header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-family: 'Times New Roman', serif;
+    font-family: 'Alpino';
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: normal;
+    margin-left: 20px;
+    color: #000000;
+    font-family: 'Alpino';
+}
+
+nav {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Alpino';
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 25px;
+
+}
+
+
+
+#workspace {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+    display: none;
+}
+
+
+#background {
+    display: block;
+    max-width: 100%;
+    max-height: 90vh;
+
+}
+
+
+.nav-btn {
+}
+
+
+.tool {
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    display: block;
+    overflow: show;
+    top: 300px;
+    left: 700px;
+}
+
+
+.tool img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+.tool .bw {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.tool .color {
+    opacity: 0;
+    transform: scale(1);
+}
+
+
+.tool:hover .bw {
+    opacity: 0;
+}
+
+.tool:hover .color {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+
+
+
+.Glasses {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 400px;
+    left: 450px;
+}
+
+.Glasses {
+    position: relative;
+    width: 200px;
+    height: 160px;
+    display: block;
+}
+
+
+.Glasses img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    object-fit: contain;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+.Glasses .bw {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+}
+
+
+.Glasses .color {
+    opacity: 0;
+    transform: scale(1);
+    z-index: 2;
+}
+
+
+.Glasses:hover .bw {
+    opacity: 0;
+}
+
+.Glasses:hover .color {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+.Glue {
+    position: absolute;
+    width: 170px; /* Adjust as needed */
+    height: 283px;
+    top: 560px; /* Adjust position */
+    left: 820px; /* Adjust position */
+    display: block;
+
+}
+
+
+.Glue img {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 180%;
+    height: 140%;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+.Glue.bw {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.Glue .color {
+    opacity: 0;
+    transform: scale(1);
+}
+
+
+.Glue:hover .bw {
+    opacity: 0;
+}
+
+.Glue:hover .color {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.Music {
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    display: block;
+    top: 5px;
+    left: 9px;
+}
+
+
+.Music img {
+    position: absolute;
+    top: 40px;
+    left: 840px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+.Music .bw {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.Music .color {
+    opacity: 0;
+    transform: scale(1);
+}
+
+
+.Music:hover .bw {
+    opacity: 0;
+}
+
+.Music:hover .color {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+
+.Scissors {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: block;
+    top: 0px;
+    left: 0px;
+}
+
+
+.Scissors img {
+    position: absolute;
+    top: -100px;
+    left: 100px;
+    width: 140%;
+    height: 140%;
+    object-fit: contain;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+.Scissors .bw {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+}
+
+
+.Scissors .color {
+    opacity: 0;
+    transform: scale(1);
+    z-index: 2;
+}
+
+
+.Scissors:hover .bw {
+    opacity: 0;
+}
+
+.Scissors:hover .color {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+.Book {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: block;
+    top: 0px;
+    left: 0px;
+}
+
+
+.Book img {
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    left: 100px;
+    width: 150%;
+    height: 150%;
+    object-fit: contain;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    transform: rotate: 30deg;
+}
+
+
+.Book .bw {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 1;
+}
+
+
+.Book .color {
+    opacity: 0;
+    transform: scale(1);
+    z-index: 2;
+}
+
+
+.Book:hover .bw {
+    opacity: 0;
+}
+
+.Book:hover .color {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+.Crayons {
+    position: absolute;
+    width: 200px; /* Adjust as needed */
+    height: 200px;
+    display: block;
+    top: 5px; /* Adjust position */
+    left: 9px; /* Adjust position */
+}
+
+
+.Crayons img {
+    position: absolute;
+    top: 0px;
+    left: 500px;
+    width: 150%;
+    height: 150%;
+    object-fit: contain;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+.Crayons .bw {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.Crayons .color {
+    opacity: 0;
+    transform: scale(1);
+}
+
+
+.Crayons:hover .bw {
+    opacity: 0;
+}
+
+.Crayons:hover .color {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.about {
+    max-width: 800px;
+    margin: 5rem auto;
+    padding-bottom: 20px;
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.about p {
+    text-decoration: none;
+    color: inherit;
+    text-underline: none;
+    font-family: 'Alpino';
+}
+
+.scrolling-name {
+    width: 100%;
+    overflow: hidden;
+    background-color: fdf6e3;
+    padding: 10px;
+    padding-bottom: 50px;
+    font-family: 'Alpino';
+    font-size: 40px;
+    color: #003dda;
+}
+
+.scrolling-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-loop 40s linear infinite;
+}
+
+.scrolling-track span {
+    white-space: nowrap;
+    padding-right: 50px;
+}
+
+@keyframes scroll-loop {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* Nik's code here */
+section.cutting-mat-background {
+    height: 800px;
+    width: 1200px;
+    background-size: contain;
+    background-image: url('New-background.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.site-footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #fdf6e3; /* matches cream background */
+    text-align: center;
+    font-size: 14px;
+    color: #444;
+    font-family: "Alpino";
+    margin-top: auto;
+    border-top: 1px solid #ccc;
+}
+
+body {
+    cursor: url('circle-24.ico'), auto;
+}
+
+h1:hover, p:hover, a:hover, .about-text:hover {
+    cursor: url('circle-24.ico'), pointer;
+}
+
+
+

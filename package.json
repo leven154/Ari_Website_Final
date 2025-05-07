@@ -1,5 +1,5 @@
 {
-  "name": "${PROJECT_NAME}",
+  "name": "Ari_Website",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",

@@ -1,0 +1,139 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background: #fffefc;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+header {
+    background: #f2f2f2;
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Menu icon */
+.menu-icon {
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Nav styling */
+.nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        right: 1.5rem;
+        top: 60px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav ul {
+        display: flex;
+    }
+}
+
+/* Main section */
+.intro {
+    max-width: 1000px;
+    margin: 3rem auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1.5rem;
+    flex-wrap: wrap;
+}
+
+.profile img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+}
+
+.bio {
+    flex: 1;
+    min-width: 250px;
+}
+
+.bio h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.bio p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* Mobile optimization */
+@media (max-width: 600px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .bio h2 {
+        font-size: 1.5rem;
+    }
+
+    .bio p {
+        font-size: 0.95rem;
+    }
+}
