@@ -1,0 +1,164 @@
+
+@font-face {
+    font-family: 'Alpino';
+    src: url('Alpino-Regular.otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Chillax';
+    src: url('Chillax-Regular.otf');
+    font-weight: normal;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-family: 'Alpino', 'Times New Roman', serif;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-left: 20px;
+    color: #000;
+}
+
+nav {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background: #fdf6e3;
+    color: #000;
+    cursor: url('circle-24.ico'), auto;
+}
+
+body a:hover, body button:hover {
+    cursor: url('circle-24.ico'), pointer;
+}
+
+
+.mat-section {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-image: url('New-background.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.mat-section h1 {
+    font-size: 80px;
+    color: #000;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    font-family: 'Alpino';
+}
+
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 90%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    font-family: 'Alpino';
+}
+
+.contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 10px 18px;
+    width: 95%;
+    font-size: 20px;
+    font-family: 'Alpino';
+    background: #003dda;
+    color: #fff4cf;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button:hover {
+    background: #012fa6;
+    transform: scale(1.04);
+    color: #fff4cf;
+}
+
+
+.contact-info {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    font-family: 'Alpino';
+}
+
+.contact-info a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Chillax';
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+
+body h1:hover, body p:hover, body a:hover {
+    cursor: url('circle-24.ico'), pointer;
+}

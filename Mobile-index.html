@@ -1,37 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ari Leventhal – Portfolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Ari Leventhal</title>
+  <link rel="stylesheet" href="About-mobile.css">
 </head>
 <body>
+
+
+
+
 <header>
-  <div class="nav-wrapper">
-    <h1 class="logo">Ari</h1>
-    <input type="checkbox" id="menu-toggle" />
-    <label for="menu-toggle" class="menu-icon">&#9776;</label>
-    <nav class="nav">
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+  <h1>Ari Leventhal</h1>
+
+  <!-- Menu toggle and hamburger icon -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+  <label for="menu-toggle" class="hamburger">
+    <p>Pages</p>
+  </label>
+
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Home.html">Games</a></li>
+      <li><a href="Journal-folio.html">Journal-folio</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
-<main>
-  <section class="intro">
-    <div class="profile">
-      <img src="profile.jpg" alt="Ari Leventhal" />
-    </div>
-    <div class="bio">
-      <h2>Hi, I’m Ari.</h2>
-      <p>Creative director enthusiast with a love for storytelling, movement, and multimedia design. I build beautiful things with a relaxed but persistent energy. Bilingual, biracial, and always remixing my world into something vivid.</p>
-    </div>
-  </section>
+
+<main class="main-container">
+  <div class="hover-container">
+
+    <section class="about-section">
+      <h1>Hi, My Name is Ari </h1>
+      <div class="cloud-bg">
+      </div>
+      <div class="about-content">
+        <div class="about-images">
+          <p class="about-text">
+            Hi, I’m Ari — a creative designer with a passion for bringing ideas to life across digital, physical, and unexpected spaces. My work blends vibrant visuals, playful concepts, and thoughtful storytelling — all rooted in the belief that creativity should feel a little magical (and never too serious). From sewing projects to digital art to branding concepts, I’m constantly exploring new ways to connect design with real people. Take a look around — you’ll find a little bit of everything, and a whole lot of imagination.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="additional-info">
+      <h2>What Can I Do for You?</h2>
+      <div class="tools-columns">
+        <ul>
+          <li>Adobe Photoshop</li>
+          <li>Adobe Illustrator</li>
+          <li>Figma</li>
+          <li>Canva</li>
+          <li>Google Suite</li>
+        </ul>
+        <ul>
+          <li>Adobe InDesign</li>
+          <li>Sketch Up</li>
+          <li>HTML / CSS</li>
+          <li>Webflow</li>
+          <li>Microsoft 365</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="who-i-am-section">
+      <div class="who-i-am-content">
+        <h2>Who Am I?</h2>
+        <div class="who-i-am-wrapper">
+          <h1>EXPERIENCE</h1>
+        </div>
+
+        <div class="who-i-am-wrapper">
+          <p>
+            I've had the privilege of working on various projects, from creative internships to real-world design challenges. Here are some of the highlights:
+          </p>
+
+          <ul class="experience-list">
+            <li><strong>Creative Intern at Barcode Ave C (Jan 2024 - May 2024):</strong> Assisted in rebranding efforts and developed visual identities for merchandise. Managed Shopify listings and optimized product descriptions to enhance the e-commerce experience.</li>
+            <li><strong>DesignU at University of Minnesota (Fall 2024 - Present):</strong> Collaborating with local businesses to improve UX through website design and branding strategies.</li>
+            <li><strong>FAFSA Day Project (Fall 2024):</strong> Designed event materials and digital interfaces to enhance student engagement and streamline in-person assistance for FAFSA filing.</li>
+            <li><strong>Hologram Skateboard Deck Project (Fall 2024):</strong> Designed a customizable interactive skateboard deck prototype for Vans stores, including technical elements like display screen integration and user interface.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-cta">
+      <p>Want to see what I’ve been working on?</p>
+      <a href="Journal-folio.html" class="cta-button">Journal-folio</a>
+    </section>
+
+
+  </div>
 </main>
+
 </body>
 </html>
