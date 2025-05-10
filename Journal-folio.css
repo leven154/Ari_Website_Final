@@ -81,9 +81,10 @@ header nav ul li a {
 }
 
 .project-description {
-    font-size: 18px;
+    font-size: 25px;
     margin-top: 15px;
     color: #333;
+    font-family: 'Alpino', serif;
 }
 
 .project-video {
@@ -93,6 +94,7 @@ header nav ul li a {
     margin: 20px auto;         /* Optional: centers the video horizontally */
     max-width: 100%;           /* Responsive resizing */
 }
+
 
 body {
     cursor: url('circle-24.ico'), auto;
