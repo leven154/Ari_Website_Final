@@ -30,6 +30,11 @@ header h1 {
     font-family: 'Alpino', serif;
 }
 
+h2 {
+    font-family: 'Alpino', serif;
+    text-size: 50px;
+}
+
 nav {
     position: absolute;
     top: 30px;
@@ -102,3 +107,81 @@ body {
 h1:hover, p:hover, a:hover, .about-text:hover {
     cursor: url('circle-24.ico'), pointer;
 }
+
+.before-image {
+     width: 50%;
+}
+.slide-container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.phase-label {
+    font-family: 'Alpino', serif;
+    font-size: 16px;
+    color: #003dda;
+    margin-top: 5px;
+}
+.image-frame {
+    display: inline-block;
+    border: 2px solid #003dda;
+    border-radius: 10px;
+    padding: 0;
+}
+
+.project-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: none; /* remove border from image itself */
+    border-radius: 10px;
+}
+
+/* Hide the radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Default button styling */
+.slide-btn {
+    padding: 10px 20px;
+    background-color: lightgray;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 20px; /* Add space between the image and the buttons */
+}
+
+.slide-btn:hover {
+    background-color: gray;
+}
+
+/* Hide the radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Image display control */
+#final-phase:checked ~ .project-image:first-of-type,
+#first-phase:checked ~ .project-image:nth-of-type(2) {
+    display: block;
+}
+
+#final-phase:checked ~ .project-image:nth-of-type(2),
+#first-phase:checked ~ .project-image:first-of-type {
+    display: none;
+}
+
+/* Highlight the button associated with the checked radio */
+#final-phase:checked ~ .slideshow-buttons label[for="final-phase"],
+#first-phase:checked ~ .slideshow-buttons label[for="first-phase"] {
+    background-color: blue;
+    color: white;
+}
+
+/* Adjust the position of the buttons below the images */
+.slideshow-buttons {
+    margin-top: 40px; /* Space the buttons further from the image */
+}
+

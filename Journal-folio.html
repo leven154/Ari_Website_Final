@@ -6,7 +6,49 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="Journal-folio.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Alpino&display=swap" rel="stylesheet" />
+  <style>
+    .slideshow {
+      position: relative;
+      display: inline-block;
+      max-width: 100%;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      border: 2px solid #003dda;
+      border-radius: 10px;
+      transition: opacity 0.3s ease;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    .slideshow-buttons {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .slide-btn {
+      background-color: transparent;
+      border: 2px solid #003dda;
+      color: #003dda;
+      font-size: 20px;
+      padding: 5px 15px;
+      margin: 0 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-family: 'Alpino', serif;
+    }
+
+    .slide-btn:hover {
+      background-color: #003dda;
+      color: #fff;
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
@@ -21,51 +63,163 @@
   </nav>
 </header>
 
+<h2 style="text-align: center; font-family: 'Alpino', serif; margin-bottom: 30px; font-size: 36px;">
+  Drafted & Crafted: Storytelling Through Stillness & Motion
+</h2>
+
+
 <main class="portfolio">
   <article class="project">
     <h2 class="project-title">Scrolling Through Time</h2>
-    <img src="MyDay2.png" alt="Screenshot of Project One" class="project-image"/>
-    <p class="project-description">Digital Illustration</p> <p class="project-description">A visual timeline of a typical day in my life, this piece charts everything from waking up to winding down. I structured the flow to mimic how time feels rather than how it’s measured. It feels disjointed, fast, screen-heavy, and occasionally still. It's an intimate look at my routines and habits, with a focus on how digital life shapes them.</p>
+    <div class="slideshow" data-project="scrolling">
+      <img src="MyDay2.png" alt="Final illustration" class="slide project-image active" />
+      <img src="Scrolling%20Throught%20Time%20Before%20.png" alt="Before illustration" class="slide project-image before-image" />
+      <div class="slideshow-buttons">
+        <button class="slide-btn" onclick="prevSlide('scrolling')">←</button>
+        <button class="slide-btn" onclick="nextSlide('scrolling')">→</button>
+      </div>
+    </div>
+    <p class="project-description">Digital Illustration</p>
+    <p class="project-description">This piece presents a visual timeline of a typical day in my life, charting everything from waking up to winding down. The second image shows the initial phase of the project, where I created a graph tracking my daily routines. Through this process, I discovered that much of my day was spent on my phone or computer, working, which inspired the creation of the final piece. The finished work reflects how deeply embedded technology is in my daily life, seamlessly integrating with my other routines throughout the day.</p>
   </article>
+
 
   <article class="project">
     <h2 class="project-title">Creative Overload</h2>
-    <img src="Me%20Working%20.png" alt="Screenshot of Project Two" class="project-image"/>
-    <p class="project-description">Digital Illustration</p> <p class="project-description"> This self-portrait captures the chaos and creativity of my workspace. It’s an honest depiction of what it looks like when I'm deep in my work flow surrounded by clutter, tabs, and ideas. I wanted to reflect how overwhelming but rewarding the creative process can feel when inspiration, deadlines, and distractions collide.</p>
+    <div class="slideshow" data-project="creative">
+      <img src="Me%20Working%20.png" alt="Final illustration" class="slide project-image active" />
+      <img src="Creative%20Overload%20Before.png" alt="Before illustration" class="slide project-image before-image" />
+      <div class="slideshow-buttons">
+        <button class="slide-btn" onclick="prevSlide('creative')">←</button>
+        <button class="slide-btn" onclick="nextSlide('creative')">→</button>
+      </div>
+    </div>
+    <p class="project-description">Digital Illustration</p>
+    <p class="project-description">This self-portrait captures the chaos and creativity not only of my workspace but also of how I spend most of my time as a student and designer. I began the project by creating a timeline sketch of my typical workday, starting with the bus ride as I watch the town pass by. I then chose to focus on what happens after I get off the bus—settling down with a latte in a bustling environment and diving into the grind. This setting helps me stay focused, sometimes for hours at a time.</p>
   </article>
+
 
   <article class="project">
-    <h2 class="project-title"> A Brave and Startling Truth</h2>
+    <h2 class="project-title">A Brave and Startling Truth</h2>
 
-    <video class="project-video" controls width="640">
-      <source src="AriMovieFinalCompressed.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <!-- Slideshow container -->
+    <div class="slideshow" data-project="video">
+      <!-- Original video slide (active by default) -->
+      <video class="slide project-video active" controls width="640">
+        <source src="AriMovieFinalCompressed.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
 
+      <!-- "Before" video slide -->
+      <video class="slide project-video before-video" controls width="640">
+        <source src="AriMovieBeforeCompressed.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
 
-    <p class="project-description">Short Film (Video Editing, Sound Design, Found Footage)</p> <p class="project-description"> A personal interpretation of Maya Angelou’s poem A Brave and Startling Truth, composed from raw video clips collected throughout the past year. The film overlays moments of stillness, motion, and solitude with my original bass guitar composition. It explores the quiet beauty of the mundane and how truth reveals itself in everyday gestures.</p>
+      <!-- Slideshow navigation buttons -->
+      <div class="slideshow-buttons">
+        <button class="slide-btn" onclick="prevSlide('video')">←</button>
+        <button class="slide-btn" onclick="nextSlide('video')">→</button>
+      </div>
+    </div>
+
+    <!-- Project description -->
+    <p class="project-description">Short Film (Video Editing, Sound Design, Found Footage)</p>
+    <p class="project-description">This piece is a personal interpretation of Maya Angelou’s poem A Brave and Startling Truth. I aimed to capture the rawness and authenticity of the world around us, especially when we're not consumed by technology, work, or school. I began by taking photos from the past year and collaging them together, accompanied by the song 'Film' by Aphex Twin, to evoke a sense of nostalgia for a world that is rapidly disappearing. I then created a second version using videos I had captured over the past few months, concluding the short film with a clip from Lake Harriet Band Shell, one of my favorite places to reflect on life.</p>
   </article>
+
+
 
   <article class="project">
     <h2 class="project-title">Cut & Construct: My Bedroom Reimagined</h2>
-    <img src="My_Bedroom.png" alt="Screenshot of Project Two" class="project-image"/>
-      <p class="project-description">Physical Paper Model with AI-Enhanced Photography</p> <p class="project-description"> A three-dimensional paper model of my bedroom created by hand using scissors, tape, and repurposed materials. I used AI image tools to enhance the visual atmosphere. This piece reflects my relationship with personal space, identity, and the environments where creativity happens—even in clutter or chaos. It also introduces the slow and unnoticable intergration of AI in our lives, especially as designers and artists.</p>
+    <div class="slideshow" data-project="bedroom">
+      <!-- After image now comes first and is active -->
+      <img src="My_Bedroom.png" class="slide project-image active" alt="After image">
+      <!-- Before image now comes second -->
+      <img src="ThefortBefore.png" class="slide project-image" alt="Before image">
+
+      <div class="slideshow-buttons">
+        <button class="slide-btn" onclick="prevSlide('bedroom')">←</button>
+        <button class="slide-btn" onclick="nextSlide('bedroom')">→</button>
+      </div>
+    </div>
+    <p class="project-description">Physical Paper Model with AI-Enhanced Photography</p>
+    <p class="project-description">I created a three-dimensional paper model of my bedroom using origami techniques, then scanned the paper version and used artificial intelligence to add background features to the room. Through this process, I wanted to explore how AI is gradually integrating into my life as a designer, blurring the line between real life and AI. I began the project by constructing a pillow fort in my bedroom to highlight the innocence of design and its everyday simplicity. As I progressed, the piece evolved into a more advanced rendition when I realized how frequently I rely on AI to assist with many of my projects.</p>
   </article>
 
   <article class="project">
     <h2 class="project-title">Keep Pushing</h2>
-    <img src="skateboard%20me.png" alt="Screenshot of Project Two" class="project-image"/>
-    <p class="project-description">Collage Pastel Drawing</p> <p class="project-description"> This piece captures a moment of motion and self-expression through the act of skateboarding. Using realistic pastel techniques for the figure, I introduced elements of abstraction by cutting out and replacing myself with bold red paper, shifting the original figure slightly to the right. The black paper road anchors the composition, contrasting with the fluidity of the movement. The combination of realism and collage reflects the balance between the grounded reality of my personal experience and the dynamic energy of skateboarding, where each ride feels like a blend of control and freedom.</p>
+
+    <div class="slideshow" data-project="skate">
+      <!-- Final image -->
+      <img src="skateboard%20me.png" alt="Final version" class="slide project-image active" />
+
+      <!-- Before video -->
+      <video class="slide project-video" width="640" controls>
+        <source src="SkateboardBefore.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+
+      <!-- Navigation buttons -->
+      <div class="slideshow-buttons">
+        <button class="slide-btn" onclick="prevSlide('skate')">←</button>
+        <button class="slide-btn" onclick="nextSlide('skate')">→</button>
+      </div>
+    </div>
+
+    <p class="project-description">Collage Pastel Drawing</p>
+    <p class="project-description">
+      This piece captures a moment of motion and self-expression through skateboarding. I began skating during my freshman year of high school, at the height of the COVID-19 pandemic. I never expected the hobby to stick—but here I am, in my sophomore year of college, still skating. Admittedly, I’m still not great at it, but I’ve kept going despite countless failed attempts at kickflips and reverts. With this project, I wanted to highlight my dedication to myself—how sometimes we keep pushing forward without even realizing it, simply because there's something satisfying about failing and trying again.
+    </p>
   </article>
+
 
   <article class="project">
     <h2 class="project-title">Reflection</h2>
-    <p class="project-description">These projects have allowed me to weave narratives not just through words, but through visual storytelling, each piece telling a personal experience. "Scrolling Through Time" tells the story of my day, not in a linear sense but through time capturing moments of fast-paced digital life and quiet stillness. "Creative Overload" reflects the narrative of the creative process following the inspiration, deadlines, and distractions that come with being a designer. "A Brave and Startling Truth" takes a more abstract approach, using video and sound to tell a story about truth and beauty emerging from the everyday, with the stillness of the mundane providing the most profound moments. "Cut & Construct" is a narrative of identity and space, showing how technology like AI, becomes part of our stories, shaping how we interact with the world. Finally, "Keep Pushing" is a story of motion and freedom, blending realism with abstraction to show the dynamic and unpredictable nature of self-expression. Through these pieces, I’ve explored how stories can be told in multiple forms, using visual elements to capture the complexity and depth of human experience.</p>
-  </article>
-  </article>
+    <p class="project-description">Looking back on these projects, I realize how much of my work is rooted in everyday life. My routines, memories, frustrations, and the ways I process the world around me. Whether it’s building a paper model of my bedroom or documenting my failed skate tricks, each piece is a reflection of where I’ve been emotionally, creatively, and personally. I’ve always been interested in blending the analog with the digital—cutting paper by hand, using AI to fill in the gaps, collaging photos with sound—because that’s how my brain works: a mix of structure and chaos, memory and imagination.
+      A lot of my work explores how technology has become part of my day-to-day life, sometimes without me even noticing. At the same time, I’m drawn to moments of stillness and nostalgia, things like watching the world go by on a bus or sitting at Lake Harriet just thinking. I’m not always trying to make something polished or perfect. Most of the time, I’m trying to make something honest. I want my work to feel like something real people can relate to—because I’m still figuring things out, and I think there’s beauty in that.
+      Through all of these projects, I’ve learned that I’m someone who keeps showing up—for myself, for the process—even when things aren’t working out exactly how I planned. Whether it’s failed kickflips, AI glitches, or weird little timeline graphs, every piece is part of a larger story I’m telling about growth, creativity, and not being afraid to just try.
 
-
+    </p>
+  </article>
 </main>
+
+<script>
+  const slideIndices = {};
+
+  function showSlide(project, index) {
+    const slides = document.querySelectorAll(`.slideshow[data-project="${project}"] .slide`);
+    if (!slides.length) return;
+
+    if (index >= slides.length) index = 0;
+    if (index < 0) index = slides.length - 1;
+    slideIndices[project] = index;
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide(project) {
+    const current = slideIndices[project] || 0;
+    showSlide(project, current + 1);
+  }
+
+  function prevSlide(project) {
+    const current = slideIndices[project] || 0;
+    showSlide(project, current - 1);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const allSlideshows = document.querySelectorAll('.slideshow');
+    allSlideshows.forEach(slideshow => {
+      const project = slideshow.getAttribute('data-project');
+      slideIndices[project] = 0;
+      showSlide(project, 0);
+    });
+  });
+</script>
 
 </body>
 </html>
