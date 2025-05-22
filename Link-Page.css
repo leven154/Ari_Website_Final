@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'Alpino';
+    src: url('Alpino-Regular.otf');
+    font-weight: normal;
+}
+/* Reset & base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #fdf6e3;
+    font-family: 'Times New Roman', serif;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.link-page {
+    text-align: center;
+    max-width: 400px;
+    padding: 20px;
+    font-family: 'Alpino', serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #003dda;
+    margin-bottom: 40px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center; /* centers buttons horizontally */
+}
+
+
+.btn {
+    display: inline-block;
+    width: 240px;           /* fixed width */
+    padding: 18px 0;        /* vertical padding only */
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: 'Alpino', serif;
+    color: white;
+    background-color: #003dda;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 61, 218, 0.3);
+    transition: background-color 0.3s ease;
+    text-align: center;     /* center text horizontally */
+}
+.btn:hover,
+.btn:focus {
+    background-color: #001a75;
+    outline: none;
+}
+
+.desktop-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desktop-note {
+    margin-top: 15px;
+    max-width: 300px;
+    font-size: 0.95rem;
+    color: #333;
+    font-family: 'Alpino', serif;
+}
