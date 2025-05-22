@@ -32,25 +32,44 @@ header h1 {
     font-weight: normal;
     margin-left: 20px;
     color: #000000;
-    font-family: 'Alpino';}
+    font-family: 'Alpino';
+}
 
 .profilePic-wrapper {
-
-    padding-bottom: 20px;
-    padding-top: -20px;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
 }
 
 .profilePic {
-    max-width: 200px;
+    width: 90%;
+    max-width: 460px;
+    margin-left: 200px;
+    margin-top: 10px;
     border: 5px solid #003dda;
     border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+@media (max-width: 768px) {
+    .profilePic-wrapper {
+        padding-top: 20px;
+    }
 
-/* About Section */
+    .profilePic {
+        width: 100%;
+        max-width: 300px;
+        margin-left: 0;
+    }
+}
+
 .about-section {
     padding: 2rem;
+    position: relative;
 }
 
 .about-section h1 {
@@ -60,22 +79,12 @@ header h1 {
     color: #003dda;
 }
 
-.profilePic {
-    width: 460px;
-    margin-left: 200px;
-    margin-top: 10px;
-    border: 5px solid #003dda;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
 .about-content {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .about-images {
@@ -119,7 +128,6 @@ header h1 {
     font-family: 'Alpino';
 }
 
-/* Additional Info */
 .additional-info {
     text-align: center;
     max-width: 800px;
@@ -133,7 +141,6 @@ header h1 {
     color: #003dda;
 }
 
-/* Tools Section */
 .tools-columns {
     display: flex;
     justify-content: center;
@@ -153,7 +160,6 @@ header h1 {
     margin-bottom: 10px;
 }
 
-/* Who I Am Section */
 .who-i-am-section {
     background-color: #fdf6e3;
     color: #003dda;
@@ -200,7 +206,6 @@ header h1 {
     margin-bottom: 20px;
 }
 
-/* Experience List */
 .experience-list {
     list-style-type: disc;
     padding-left: 40px;
@@ -215,17 +220,14 @@ header h1 {
     margin-bottom: 1em;
 }
 
-/* Hover Effects */
 a:hover,
 button:hover,
 h1:hover,
 p:hover,
-a:hover,
 .about-text:hover {
     cursor: url('circle-24.ico'), pointer;
 }
 
-/* Projects Call to Action */
 .projects-cta {
     background-color: #003dda;
     color: #fff;
@@ -256,17 +258,11 @@ a:hover,
     color: #000;
     cursor: pointer;
 }
-.about-section {
-    position: relative;
-}
-
 
 .menu-toggle {
     display: none;
 }
 
-
-/* Hamburger Menu */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -286,10 +282,6 @@ a:hover,
     width: 100%;
     background-color: black;
     border-radius: 2px;
-}
-
-.menu-toggle {
-    display: none;
 }
 
 .nav-menu {
@@ -313,7 +305,6 @@ a:hover,
     font-family: 'Alpino', serif;
 }
 
-/* Mobile Nav */
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -343,10 +334,3 @@ a:hover,
         display: flex;
     }
 }
-
-
-
-
-
-
-
