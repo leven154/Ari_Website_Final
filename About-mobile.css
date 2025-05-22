@@ -34,6 +34,22 @@ header h1 {
     color: #000000;
     font-family: 'Alpino';}
 
+.profilePic-wrapper {
+
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    padding-top: -20px;
+
+}
+
+.profilePic {
+    max-width: 200px;
+    border: 5px solid #003dda;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 
 /* About Section */
 .about-section {
